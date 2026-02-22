@@ -1,0 +1,33 @@
+target/
+!.mvn/wrapper/maven-wrapper.jar
+/extdirs/
+/lib/
+
+# IntelliJ IDEA
+.idea/
+*.iws
+*.iml
+*.ipr
+
+# Eclipse
+.project
+.classpath
+.settings/
+.metadata/
+
+# NetBeans
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+# Log files
+*.log
+
+# Temp files
+*.tmp
+*.bak
+*.swp
+*~
+.DS_Store
