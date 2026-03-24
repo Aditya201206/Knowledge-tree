@@ -1,11 +1,11 @@
-# 🧠 Dynamic Knowledge Graph – Java Maven Project
+#  Dynamic Knowledge Graph – Java Maven Project
 
 > **Advanced semantic graph engine** combining 5 powerful data structures to build, version, and query evolving knowledge networks.  
 > _Extract entities, mine phrases, track temporal versions, and answer natural-language-like queries._
 
 ---
 
-## ✨ Overview
+##  Overview
 
 This project implements a **minimal yet production-grade knowledge graph prototype** in **Java 17** using **Maven**. It ingests unstructured text, discovers entities and relationships, stores them in a versioned property graph, and exposes a rich query interface. The core innovation lies in the **fusion of five classical data structures** to achieve high-performance extraction, deduplication, versioning, and retrieval.
 
@@ -13,7 +13,7 @@ Whether you're building a **question‑answering system**, a **research knowledg
 
 ---
 
-## 🧩 Architectural Pillars – 5 Data Structures
+##  Architectural Pillars – 5 Data Structures
 
 | Structure       | Role                                                                 | Location |
 |-----------------|----------------------------------------------------------------------|----------|
@@ -32,14 +32,14 @@ These structures work in concert:
 
 ---
 
-## 🚀 Features
+##  Features
 
-- 🔍 **Named Entity Recognition** – pre‑loaded dictionary + Trie for instant lookup & prefix suggestions.
-- 🧩 **Phrase Mining** – suffix array automatically discovers salient multi‑word terms from raw text.
-- ⚡ **Deduplication** – Bloom filter prevents duplicate `(subject, predicate, object)` triples.
-- 📅 **Temporal Versioning** – B‑Tree stores every commit; query any past state by timestamp.
-- 🕸️ **Property Graph Core** – entities have properties; edges support labels & weights.
-- 📝 **Rich Query API**:
+-  **Named Entity Recognition** – pre‑loaded dictionary + Trie for instant lookup & prefix suggestions.
+- **Phrase Mining** – suffix array automatically discovers salient multi‑word terms from raw text.
+-  **Deduplication** – Bloom filter prevents duplicate `(subject, predicate, object)` triples.
+-  **Temporal Versioning** – B‑Tree stores every commit; query any past state by timestamp.
+-  **Property Graph Core** – entities have properties; edges support labels & weights.
+-  **Rich Query API**:
   - `entities(prefix)` – autocomplete entity names.
   - `relationsOf(entity)` – all outgoing/incoming edges.
   - `path(source, target)` – shortest path using BFS.
@@ -47,7 +47,7 @@ These structures work in concert:
 
 ---
 
-## 📦 Project Structure
+##  Project Structure
 dynamic-knowledge-graph/
 ├── pom.xml # Maven config (Java 17)
 ├── src/main/java/com/dkg/
@@ -72,14 +72,14 @@ dynamic-knowledge-graph/
 
 ---
 
-## 🛠️ Prerequisites
+##  Prerequisites
 
 - **Java 17** (or higher)
 - **Maven 3.6+**
 
 ---
 
-## ⚙️ Setup & Build
+##  Setup & Build
 
 1. **Clone the repository**
    ```bash
@@ -97,7 +97,7 @@ Run with custom files
 
 bash
 mvn -q -DskipTests exec:java -Dexec.args="--dictionary data/custom_dict.txt --input data/corpus.txt --save data/output.json"
-🧪 Usage Examples
+ Usage Examples
 Basic ingestion & query (from Main.java)
 java
 // 1. Load dictionary and input
@@ -137,7 +137,7 @@ Queries:
 > relationsOf("neural network") → [(neural network)-[uses]->(backpropagation)]
 > path("machine learning", "backpropagation") → ["machine learning", "neural network", "backpropagation"]
 > temporal (older timestamp) → returns versioned relations.
-📂 File Formats
+ File Formats
 Dictionary (dictionary.txt)
 One entity per line. Used to populate the Trie for NER.
 
